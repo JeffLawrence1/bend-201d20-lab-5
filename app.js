@@ -104,19 +104,24 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
   var arr = [];
-  var sum = 0;
+  // var sum = 0;
   var strin = '';
 
-  for(var i = 0; i < sumArr.length; i++){
-    sum += sumArr[i];
+  var sum1 = sum(sumArr[0], sumArr[1]);
+  console.log(sum1[0]);
+  var sum2 = sum(sum1[0], sumArr[2]);
+  console.log(sum2[0]);
+  arr.push(sum2[0]);
+  // for(var i = 0; i < sumArr.length; i++){
+  //   sum += sumArr[i];
     
-    console.log(sum);
+  //   console.log(sum);
     
-  }
-  arr.push(sum);
+  
+  // arr.push(sum);
   strin += sumArr;
   console.log(strin);
-  arr.push(strin + ' was passed in as an array of numbers, and ' + sum + ' is their sum.');
+  arr.push(strin + ' was passed in as an array of numbers, and ' + sum2[0] + ' is their sum.');
   return arr;
 }
 
@@ -138,7 +143,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var arr = [];
+  var sum = 0;
+  var strin = '';
 
+  for(var i = 0; i < sumArr.length; i++){
+    sum += sumArr[i];
+    
+    console.log(sum);
+    
+  }
+  arr.push(sum);
+  strin += sumArr;
+  console.log(strin);
+  arr.push(strin + ' was passed in as an array of numbers, and ' + sum + ' is their sum.');
+  return arr;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
