@@ -104,7 +104,7 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
   var arr = [];
-  // var sum = 0;
+
   var strin = '';
 
   var sum1 = sum(sumArr[0], sumArr[1]);
@@ -112,13 +112,7 @@ function sumArray(sumArr) { //eslint-disable-line
   var sum2 = sum(sum1[0], sumArr[2]);
   console.log(sum2[0]);
   arr.push(sum2[0]);
-  // for(var i = 0; i < sumArr.length; i++){
-  //   sum += sumArr[i];
-    
-  //   console.log(sum);
-    
-  
-  // arr.push(sum);
+
   strin += sumArr;
   console.log(strin);
   arr.push(strin + ' was passed in as an array of numbers, and ' + sum2[0] + ' is their sum.');
@@ -144,24 +138,24 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
   var arr = [];
-  var sum = 0;
+
   var strin = '';
 
-  for(var i = 0; i < sumArr.length; i++){
-    sum += sumArr[i];
-    
-    console.log(sum);
-    
-  }
-  arr.push(sum);
-  strin += sumArr;
+  var mult1 = multiply(multArr[0], multArr[1]);
+  console.log(mult1[0]);
+  var mult2 = multiply(mult1[0], multArr[2]);
+  console.log(mult2[0]);
+  arr.push(mult2[0]);
+
+  strin += multArr;
   console.log(strin);
-  arr.push(strin + ' was passed in as an array of numbers, and ' + sum + ' is their sum.');
+  arr.push('The numbers ' + strin + ' have a product of ' + mult2[0] + '.');
+  console.log(arr);
   return arr;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
