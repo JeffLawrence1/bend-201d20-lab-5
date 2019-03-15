@@ -11,12 +11,13 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) { //eslint-disable-line
   var arr = [];
   var sum1 = a + b;
-  // console.log(sum1);
+  console.log(sum1);
   arr.push(sum1);
-  // console.log(arr);
+  console.log(arr);
   arr.push('The sum of ' + a + ' and ' + b + ' is ' + sum1 + '.');
-  // console.log(arr);
+  console.log(arr);
   return arr;
+
 
 }
 
@@ -64,10 +65,27 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
+  var arr = [];
+
+  var sum1 = sum(a, b);
+  console.log(sum1[0]);
+  var sum2 = sum(sum1[0], c);
+  console.log(sum2[0]);
+  arr.push(sum2[0]);
+  var mult1 = multiply(a, b);
+  console.log(mult1[0]);
+  var mult2 = multiply(mult1[0], c);
+  console.log(mult2[0]);
+  arr.push(mult2[0]);
+  
+  arr.push(a + ' and ' + b + ' and ' + c + ' sum to ' + sum2[0] + '.');
+  arr.push('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mult2[0] + '.');
+  console.log(arr);
+  return arr;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -112,7 +130,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
